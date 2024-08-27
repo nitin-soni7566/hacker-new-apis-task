@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "hacker-news-api"
+version = "0.1.0"
+description = ""
+authors = ["nitin-soni <nitinsoni815@gmail.com>"]
+readme = "README.md"
+
+packages = [{include = "src"}]
+
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = {extras = ["all"], version = "^0.112.0"}
+redis = "^5.0.8"
+pydantic-settings = "^2.4.0"
+black = "^24.8.0"
+pyclean = "^3.0.0"
+coloredlogs = "^15.0.1"
+pytest = "^8.3.2"
+requests = "^2.32.3"
+
+[tool.poetry.scripts]
+api = "src.cli:run"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
